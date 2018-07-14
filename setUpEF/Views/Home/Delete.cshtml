@@ -1,0 +1,8 @@
+@model User
+
+<h1>Are you sure you want to delete @Model.first_name</h1>
+
+<form asp-action="DeleteUser" asp-controller="Home" method="post">
+    <input type="hidden" asp-for="@Model.id">
+    <input type="submit" value="delete">
+</form>

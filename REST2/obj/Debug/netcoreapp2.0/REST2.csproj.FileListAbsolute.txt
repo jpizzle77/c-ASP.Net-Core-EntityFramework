@@ -1,0 +1,10 @@
+C:\Users\john\desktop\c#\EntityFramework\REST2\bin\Debug\netcoreapp2.0\REST2.deps.json
+C:\Users\john\desktop\c#\EntityFramework\REST2\bin\Debug\netcoreapp2.0\REST2.runtimeconfig.json
+C:\Users\john\desktop\c#\EntityFramework\REST2\bin\Debug\netcoreapp2.0\REST2.runtimeconfig.dev.json
+C:\Users\john\desktop\c#\EntityFramework\REST2\bin\Debug\netcoreapp2.0\REST2.dll
+C:\Users\john\desktop\c#\EntityFramework\REST2\bin\Debug\netcoreapp2.0\REST2.pdb
+C:\Users\john\desktop\c#\EntityFramework\REST2\obj\Debug\netcoreapp2.0\REST2.csproj.CoreCompileInputs.cache
+C:\Users\john\desktop\c#\EntityFramework\REST2\obj\Debug\netcoreapp2.0\REST2.AssemblyInfoInputs.cache
+C:\Users\john\desktop\c#\EntityFramework\REST2\obj\Debug\netcoreapp2.0\REST2.AssemblyInfo.cs
+C:\Users\john\desktop\c#\EntityFramework\REST2\obj\Debug\netcoreapp2.0\REST2.dll
+C:\Users\john\desktop\c#\EntityFramework\REST2\obj\Debug\netcoreapp2.0\REST2.pdb

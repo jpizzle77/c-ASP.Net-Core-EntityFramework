@@ -1,0 +1,11 @@
+C:\Users\john\desktop\c#\EntityFramework\dashboard\bin\Debug\netcoreapp2.0\dashboard.deps.json
+C:\Users\john\desktop\c#\EntityFramework\dashboard\bin\Debug\netcoreapp2.0\dashboard.runtimeconfig.json
+C:\Users\john\desktop\c#\EntityFramework\dashboard\bin\Debug\netcoreapp2.0\dashboard.runtimeconfig.dev.json
+C:\Users\john\desktop\c#\EntityFramework\dashboard\bin\Debug\netcoreapp2.0\dashboard.dll
+C:\Users\john\desktop\c#\EntityFramework\dashboard\bin\Debug\netcoreapp2.0\dashboard.pdb
+C:\Users\john\desktop\c#\EntityFramework\dashboard\obj\Debug\netcoreapp2.0\dashboard.csprojResolveAssemblyReference.cache
+C:\Users\john\desktop\c#\EntityFramework\dashboard\obj\Debug\netcoreapp2.0\dashboard.csproj.CoreCompileInputs.cache
+C:\Users\john\desktop\c#\EntityFramework\dashboard\obj\Debug\netcoreapp2.0\dashboard.AssemblyInfoInputs.cache
+C:\Users\john\desktop\c#\EntityFramework\dashboard\obj\Debug\netcoreapp2.0\dashboard.AssemblyInfo.cs
+C:\Users\john\desktop\c#\EntityFramework\dashboard\obj\Debug\netcoreapp2.0\dashboard.dll
+C:\Users\john\desktop\c#\EntityFramework\dashboard\obj\Debug\netcoreapp2.0\dashboard.pdb

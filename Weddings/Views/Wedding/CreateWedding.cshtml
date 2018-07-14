@@ -1,0 +1,34 @@
+@model IndexView
+
+<h1>Plan your wedding</h1>
+
+
+<form asp-action="CreateWedding" asp-controller="Wedding" method="POST">
+        <div class="form-group">
+            <span asp-validation-for="Wedding.wedder_one"></span>
+            <label asp-for="Wedding.wedder_one"></label>
+            <input type="text" asp-for="Wedding.wedder_one">
+        </div>
+         <div class="form-group">
+            <span asp-validation-for="Wedding.wedder_two"></span>
+            <label asp-for="Wedding.wedder_two"></label>
+            <input type="text" asp-for="Wedding.wedder_two">
+        </div>
+         <div class="form-group">
+            <span asp-validation-for="Wedding.date_of_wedding"></span>
+            <label asp-for="Wedding.date_of_wedding"></label>
+            <input type="date" asp-for="Wedding.date_of_wedding">
+        </div>
+         <div class="form-group">
+            <span asp-validation-for="Wedding.wedding_address"></span>
+            <label asp-for="Wedding.wedding_address"></label>
+            <input type="text" asp-for="Wedding.wedding_address">
+        </div>
+       
+        
+        <input type="hidden" name="Wedding.user_id" value="@Model.Wedding.user_id">
+        
+      
+        <input type="submit" value="submit">
+
+</form>

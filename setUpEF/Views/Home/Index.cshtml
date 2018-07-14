@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+@model setUpEF.Models.NewUser
+
+<h1><a href="/new">Create a new User </a></h1>
+
+@if(ViewBag.Users != null)
+{
+     @foreach(var user in ViewBag.Users)
+        {
+            <p><a href= "user/@user.id">@user.first_name</a> <a href="delete/@user.id">Delete</a></p>
+        }  
+}

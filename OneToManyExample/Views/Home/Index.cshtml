@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+@model OneToManyExample.Models.IndexView
+
+<h1>Music Site</h1>
+<hr>
+<h2>Here are all of the artists in the Database</h2>
+
+
+@if(ViewBag.Artists != null)
+{
+    @foreach(var artist in ViewBag.Artists)
+    {
+    <p><a href="/artist/@artist.artist_id">@artist.name</a></p> 
+    }
+}
+
+
+<h2>Add Artist to the site</h2>
+<form asp-action="CreateArtist" asp-controller="Home">
+    <div class="form-group">
+        <span asp-validation-for="newArtist.name"></span>
+        <label asp-for="newArtist.name"></label>
+        <input asp-for="newArtist.name" class="form-control">
+    </div>
+    <input type="submit" value="Add artist">
+</form>

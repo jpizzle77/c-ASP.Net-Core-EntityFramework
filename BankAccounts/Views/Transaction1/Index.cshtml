@@ -1,0 +1,102 @@
+@using System.Collections.Generic;
+@model IndexView
+
+<!--  playing around with SELECTMANY
+@foreach(var item in Model.all_transactions)
+{
+    <p>@item</p>
+}-->
+
+@if(Model.user_transaction != null)
+{
+<h1>Welcome to @Model.user_transaction.first_name webpage</h1>
+   
+}
+
+    <div class="row">
+
+    <form asp-action="Create" asp-controller="Transaction1" method="POST">
+        <div class="form-group">
+            <span asp-validation-for="bank_transaction.transaction_amount"></span>
+            <label asp-for="bank_transaction.transaction_amount">Deposit(+) or Withdrawl(-)</label>
+            <input type="number" asp-for="bank_transaction.transaction_amount">
+        </div>
+        
+        <input type="hidden" name="user_transaction.user_id" value="@Model.user_transaction.user_id">
+        <input type="hidden" name="bank_transaction.current_balance" value="@Model.bank_transaction.current_balance">
+        <input type="submit" value="Submit">
+
+    </form>
+    <hr>
+    <hr>
+                 
+   @if(Model.user_transaction.transactions == null)
+   {
+       <h1 class="six columns">Current Balance: 0 </h1>
+   }
+   else
+   {
+       <h1 class="six columns">Current Balance: @Model.user_transaction.transactions.LastOrDefault().current_balance </h1>
+   }
+    
+</div>    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Amount</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+      <tbody>
+          @foreach(var transaction in Model.user_transaction.transactions.OrderByDescending(transaction => transaction.created_at))
+            {
+                var new_balance = 0;
+                @if(transaction.transaction_amount > 0) // transaction is positive
+                {
+                      new_balance =  @Model.user_transaction.transactions.LastOrDefault().current_balance + transaction.transaction_amount;
+                     
+                }
+                else        // (means this will be a negative number or a withdrawl)
+                         
+                {
+                    @if(transaction.transaction_amount + @Model.user_transaction.transactions.LastOrDefault().current_balance < 0)
+                    // this will add the current transaction (which is a withdrawl or negative) to the last current balance of the user
+                    // if the number is less than zero, the user does not have enough money
+                    {
+                        <p>"Insufficient Funds"</p>
+                    }
+                    else
+                    {
+                         new_balance =  @Model.user_transaction.transactions.LastOrDefault().current_balance - transaction.transaction_amount;
+                    }
+                   
+                }
+              
+                if(@new_balance > 0)
+                {
+                    <tr> 
+                        <td>$ @transaction.transaction_amount.ToString("N0")</td>
+                        <td>@transaction.created_at.ToString("D")</td>
+                    </tr> 
+                }
+                else
+                {
+                    <tr> 
+                        <td>$ @transaction.transaction_amount.ToString("N0")</td>
+                        <td>@transaction.created_at.ToString("D")</td>
+                    </tr>
+                }
+                
+                 // a ternary expression from video (week 7, session 2, around 28+ min mark) 
+                // var recent_course = (recent.Count > 0)
+                //                      ? recent.First().Session.title
+                //                      : "Not enrolled in any courses"
+               
+            
+            }
+    </tbody>
+
+</table>
+
+
+    

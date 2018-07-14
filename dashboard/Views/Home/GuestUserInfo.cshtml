@@ -1,0 +1,128 @@
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container bootstrap snippets">
+<div class="row"> 
+    
+    @model IndexView
+
+    @if(Model.Current_User.user_id == Model.User.user_id )
+    {
+  <div class="col-xs-12 col-sm-9">
+      
+
+   
+         <div class="panel panel-default">
+        <div class="panel-heading">
+            <h1 class="panel-title">Edit User #@Model.User.user_id</h1>
+        </div>
+    
+    <hr>
+    <form asp-controller="Home" asp-action="UpdateUserInfo" asp-route-id="@Model.User.user_id" class="form-horizontal" method="POST">
+        
+      <div class="panel panel-default">
+        <div class="panel-heading">
+        
+        <h4 class="panel-title">Edit User Info</h4>
+        </div>
+        <div class="panel-body">
+          <div class="form-group">
+            <label class="col-sm-2 control-label">E-mail address</label>
+            <div class="col-sm-10">
+              <input asp-for="User.email" class="form-control" >
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">First Name</label>
+            <div class="col-sm-10">
+              <input asp-for="User.first_name"  class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Last Name</label>
+            <div class="col-sm-10">
+              <input asp-for="User.last_name"  class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">User Level</label>
+            <div class="col-sm-10">
+               <select asp-for="User.user_level" class="form-control">
+               
+                <option>Admin</option>
+                <option>Guest</option>
+               
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-10 col-sm-offset-2">
+              <button type="submit" class="btn btn-primary">Update User Info</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </form>
+      
+
+
+    
+
+
+<form asp-controller="Home" asp-action="UpdateUserDescription" asp-route-id="@Model.User.user_id" class="form-horizontal" method="POST">
+     <div class="panel panel-default">
+        <div class="panel-heading">
+        <h4 class="panel-title">Description</h4>
+        </div>
+        <div class="panel-body">
+           <div class="form-group">
+            <label class="col-sm-2 control-label">Description</label>
+            <div class="col-sm-10">
+              <input type="text" asp-for="User.user_description" class="form-control">
+            </div>
+          </div>
+          
+        
+          <div class="form-group">
+            <div class="col-sm-10 col-sm-offset-2">
+              <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+          </div>
+</form>
+          
+     
+     
+      </div>
+    
+ 
+ 
+  </div>
+    
+
+
+}
+
+else
+{
+ 
+        <h2>@Model.User.first_name @Model.User.last_name </h2>
+        <h2>@Model.User.email</h2>
+        <h2>@Model.User.created_at.ToString("D")</h2>
+        <h2>@Model.User.user_level</h2>
+        <h2>@Model.User.user_description</h2>
+    
+}
+  <h3>Leave a messsage for @Model.User.first_name </h3>
+  <div class="form-group">
+        <form asp-action="CreateMessage" asp-controller="Dashboard" method="POST">
+            <span asp-validation-for="MessageUser.message"></span>
+            <label asp-for="MessageUser.message"></label>
+            <textarea asp-for="MessageUser.message" class ="form-control"></textarea>
+            <input type="hidden" name="Current_User.user_id" value="@Model.Current_User.user_id">
+            <input type="submit" value="Post">
+        </form>
+       
+    </div>
+</div>
+</div>
+   
+    

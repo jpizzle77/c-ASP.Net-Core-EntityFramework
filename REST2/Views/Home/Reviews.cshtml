@@ -1,0 +1,31 @@
+
+@model REST2.Models.Review
+
+<a href="/"><h3>Home</h3></a>
+
+
+
+
+@if(ViewBag.Reviews != null)
+{
+    
+     @foreach(var review in ViewBag.Reviews)
+        {
+            @if(review.rating == 1)
+            {
+                <h2>Review for: @review.restaurant_name &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;  @review.rating Star </h2>
+            }
+         
+            else
+            {
+                <h2>Review for: @review.restaurant_name &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;  @review.rating Stars </h2>
+            }
+
+            <h4> Reviewer: @review.reviewer_name, @review.date_of_visit.ToString("D")</h4>
+             <p>&nbsp;&nbsp;&nbsp;&nbsp; @review.review</p>
+            <p></p>
+            <p>------------------------------------------------------------------------------------------------------------------------------------</p>
+        }  
+}
+
+

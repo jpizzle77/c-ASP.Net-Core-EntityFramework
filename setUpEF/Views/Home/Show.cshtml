@@ -1,0 +1,32 @@
+@model setUpEF.Models.User
+
+<h1>Welcome to @Model.first_name  cool webpage</h1>
+
+<form asp-action="Update" asp-controller="Home" method="post">
+
+    <div class="form-group">
+        <span asp-validation-for="first_name"></span>
+        <label asp-for="first_name"></label>
+        <input asp-for="first_name">
+    </div>
+
+    <div class="form-group">
+        <span asp-validation-for="last_name"></span>
+        <label asp-for="last_name"></label>
+        <input asp-for="last_name">
+    </div>
+
+    <div class="form-group">
+        <span asp-validation-for="email"></span>
+        <label asp-for="email"></label>
+        <input asp-for="email">
+    </div>
+
+    <div class="form-group">
+        <span asp-validation-for="password"></span>
+        <label asp-for="password"></label>
+        <input asp-for="password">
+    </div>
+
+    <input type="submit" value="update">
+</form>

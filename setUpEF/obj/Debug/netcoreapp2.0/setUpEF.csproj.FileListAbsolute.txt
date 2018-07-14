@@ -1,0 +1,10 @@
+C:\Users\john\desktop\c#\EntityFramework\setUpEF\bin\Debug\netcoreapp2.0\setUpEF.deps.json
+C:\Users\john\desktop\c#\EntityFramework\setUpEF\bin\Debug\netcoreapp2.0\setUpEF.runtimeconfig.json
+C:\Users\john\desktop\c#\EntityFramework\setUpEF\bin\Debug\netcoreapp2.0\setUpEF.runtimeconfig.dev.json
+C:\Users\john\desktop\c#\EntityFramework\setUpEF\bin\Debug\netcoreapp2.0\setUpEF.dll
+C:\Users\john\desktop\c#\EntityFramework\setUpEF\bin\Debug\netcoreapp2.0\setUpEF.pdb
+C:\Users\john\desktop\c#\EntityFramework\setUpEF\obj\Debug\netcoreapp2.0\setUpEF.csproj.CoreCompileInputs.cache
+C:\Users\john\desktop\c#\EntityFramework\setUpEF\obj\Debug\netcoreapp2.0\setUpEF.AssemblyInfoInputs.cache
+C:\Users\john\desktop\c#\EntityFramework\setUpEF\obj\Debug\netcoreapp2.0\setUpEF.AssemblyInfo.cs
+C:\Users\john\desktop\c#\EntityFramework\setUpEF\obj\Debug\netcoreapp2.0\setUpEF.dll
+C:\Users\john\desktop\c#\EntityFramework\setUpEF\obj\Debug\netcoreapp2.0\setUpEF.pdb

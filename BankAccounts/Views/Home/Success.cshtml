@@ -1,0 +1,29 @@
+@model User
+
+
+
+<h1> congrats dipshit </h1>
+
+
+    <h1>Welcome to @Model.first_name webpage</h1>
+    <div class="row">
+    <form class="six columns" action="/transaction" method="post">
+
+        <label for="amount">Withdraw(-)/Deposit(+)</label>
+        <input id="amount" type="number" name="Amount">
+        <input type="submit" class="button-primary" value="Submit">
+    </form>
+    <p class="six columns">Current Balance: </p>
+</div>    
+<table>
+    <thead>
+        <tr>
+            <th>Amount</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+    

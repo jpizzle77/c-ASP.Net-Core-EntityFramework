@@ -1,0 +1,21 @@
+@model Weddings.Models.Wedding
+@using Weddings.Models
+<nav>
+    <h1>@Model.wedder_one and @Model.wedder_two 's Wedding</h1>
+    
+</nav>
+<h3>@Model.date_of_wedding.ToString("D")</h3>
+<h3>Guests:</h3>
+<ul>
+     @foreach(Rsvp rsvp in @Model.wedding_rsvps)
+    {
+        <li>@rsvp.UserRsvp.first_name @rsvp.UserRsvp.last_name</li>
+    }
+   
+</ul>
+<div data="@Model.wedding_address" id='map'></div>
+<script src="~/js/initMap.js"></script>
+<script async defer
+    type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo1y2q0DiafSssnlfLlj9dKS6Yi2AmFQ4&callback=initMap">
+</script>

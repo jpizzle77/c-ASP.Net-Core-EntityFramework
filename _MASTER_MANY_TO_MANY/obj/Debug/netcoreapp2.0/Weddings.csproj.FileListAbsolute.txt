@@ -1,0 +1,10 @@
+C:\Users\john\desktop\c#\EntityFramework\Weddings\obj\Debug\netcoreapp2.0\Weddings.csproj.CoreCompileInputs.cache
+C:\Users\john\desktop\c#\EntityFramework\Weddings\obj\Debug\netcoreapp2.0\Weddings.AssemblyInfoInputs.cache
+C:\Users\john\desktop\c#\EntityFramework\Weddings\obj\Debug\netcoreapp2.0\Weddings.AssemblyInfo.cs
+C:\Users\john\desktop\c#\EntityFramework\Weddings\bin\Debug\netcoreapp2.0\Weddings.deps.json
+C:\Users\john\desktop\c#\EntityFramework\Weddings\bin\Debug\netcoreapp2.0\Weddings.runtimeconfig.json
+C:\Users\john\desktop\c#\EntityFramework\Weddings\bin\Debug\netcoreapp2.0\Weddings.runtimeconfig.dev.json
+C:\Users\john\desktop\c#\EntityFramework\Weddings\bin\Debug\netcoreapp2.0\Weddings.dll
+C:\Users\john\desktop\c#\EntityFramework\Weddings\bin\Debug\netcoreapp2.0\Weddings.pdb
+C:\Users\john\desktop\c#\EntityFramework\Weddings\obj\Debug\netcoreapp2.0\Weddings.dll
+C:\Users\john\desktop\c#\EntityFramework\Weddings\obj\Debug\netcoreapp2.0\Weddings.pdb

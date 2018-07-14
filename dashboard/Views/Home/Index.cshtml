@@ -1,0 +1,119 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+@model IndexView
+
+
+<div class="container">
+        <div class="row centered-form">
+            <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+        	    <div class="panel panel-default">
+                     <div class="panel-heading">
+                       <h2>Register</h2>
+			    		<h3 class="panel-title"> </h3>
+			 			</div>
+        
+	 			    <div class="panel-body">
+			    		
+                        <form role="form" asp-action="Register" asp-controller="Home" method="post">
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+                                        <span asp-validation-for="NewUser.first_name"></span>
+                                        <label asp-for="NewUser.first_name"></label>
+                                        <input asp-for="NewUser.first_name"  id="first_name" class="form-control input-sm" placeholder="First Name">
+			                
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						 <span asp-validation-for="NewUser.last_name"></span>
+                                        <label asp-for="NewUser.last_name"></label>
+                                        <input asp-for="NewUser.last_name"  id="last_name" class="form-control input-sm" placeholder="Last Name">
+			    					</div>
+			    				</div>
+			    			</div>
+
+			    			<div class="form-group">
+                                    <span asp-validation-for="NewUser.email"></span>
+                                    <label asp-for="NewUser.email"></label>
+                                    <input asp-for="NewUser.email"  id="email" class="form-control input-sm" placeholder="Email Address">
+			    				
+			    			</div>
+
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+                                            <span asp-validation-for="NewUser.password"></span>
+                                            <label asp-for="NewUser.password"></label>
+                                            <input asp-for="NewUser.password"  id="password" class="form-control input-sm" placeholder="Password">
+                                    
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+                                            <span asp-validation-for="NewUser.confirm_password"></span>
+                                            <label asp-for="NewUser.confirm_password"></label>
+                                            <input asp-for="NewUser.confirm_password"  id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
+			    				
+			    					</div>
+			    				</div>
+			    			</div>
+			    			
+			    			<input type="submit" value="Register" class="btn btn-info btn-block">
+			    		
+			    		</form>
+
+
+                       
+			    	</div>
+	    		</div>
+    		</div>
+    	</div>
+     
+
+    <div class="row centered-form">
+        <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+        	<div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2>Log In</h2>
+			    	<h3 class="panel-title"> </h3>
+			 	</div>
+        	
+	 			<div class="panel-body">
+
+                        <form role="form" asp-action="Login" asp-controller="Home" method="post">
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					
+                                    <div class="form-group">
+                                            <span asp-validation-for="LogUser.log_email"></span>
+                                            <label asp-for="LogUser.log_email"></label>
+                                            <input asp-for="LogUser.log_email"  id="email" class="form-control input-sm" placeholder="Email Address" value ="super@man.com">
+                                        
+                                    </div>
+                                </div>
+
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+                                            <span asp-validation-for="LogUser.log_password"></span>
+                                            <label asp-for="LogUser.log_password"></label>
+                                            <input asp-for="LogUser.log_password"  id="password" class="form-control input-sm" placeholder="Password" value ="123">
+                                    
+			    					</div>
+			    				</div>
+			    				
+			    			</div>
+			    			
+			    			
+			    			<input type="submit" value="Login" class="btn btn-info btn-block">
+
+                           </form>
+                        </div>
+	    		</div>
+    		</div>
+    	</div>
+    </div> <!--- end of container div-->
